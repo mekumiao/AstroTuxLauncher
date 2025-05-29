@@ -11,6 +11,5 @@ services:
         ports:
             - 7777:7777/udp
         volumes:
-            - ./launcher.toml:/astrotuxlauncher/launcher.toml
             - ./AstroneerServer:/astrotuxlauncher/AstroneerServer
             - ./libs:/astrotuxlauncher/libs
