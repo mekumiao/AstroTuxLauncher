@@ -1,0 +1,13 @@
+services:
+    astrotuxlauncher:
+        tty: true
+        stdin_open: true
+        container_name: astrotuxlauncher
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: astrotuxlauncher
+        ports:
+            - 7777:7777/udp
+        volumes:
+            - ./:/astrotuxlauncher
