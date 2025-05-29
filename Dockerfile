@@ -11,7 +11,7 @@ ENV TZ=Asia/Shanghai
 ENV PYTHONUNBUFFERED=1
 ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
 RUN apt-get update && apt-get install -y git python3 python3-pip wine && rm -rf /var/lib/apt/lists/* && ln -sf python3 /usr/bin/python
-RUN git clone https://github.com/JoeJoeTV/AstroTuxLauncher ./
+RUN git clone https://github.com/mekumiao/AstroTuxLauncher ./
 RUN pip install -r requirements.txt --break-system-packages && python3 AstroTuxLauncher.py install
 COPY --chmod=0755 entrypoint.sh /usr/bin/entrypoint.sh
 ENTRYPOINT /usr/bin/entrypoint.sh
